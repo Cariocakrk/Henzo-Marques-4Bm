@@ -1,0 +1,46 @@
+/*
+	styles.css
+	Estilos básicos para a página de exemplo.
+	Comentários em português explicam as regras principais.
+*/
+
+/* Reset simples e fonte legível */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0 1rem;
+	line-height: 1.5;
+	background: #fafafa; /* cor de fundo suave */
+	color: #222;
+}
+
+header {
+	padding: 2rem 0;
+	border-bottom: 1px solid #eee;
+}
+
+main {
+	padding: 1.5rem 0;
+}
+
+#restaurante-info {
+	background: #fff;
+	border: 1px solid #e6e6e6;
+	padding: 1rem;
+	border-radius: 6px;
+	max-width: 600px;
+}
+
+/* Pequena responsividade: centraliza em telas maiores */
+@media (min-width: 640px) {
+	body {
+		padding: 2rem;
+	}
+	#restaurante-info {
+		margin: 0 auto;
+	}
+}
