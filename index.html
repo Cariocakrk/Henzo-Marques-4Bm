@@ -1,0 +1,43 @@
+<!--
+	index.html
+	Página HTML mínima para carregar o script e o estilo.
+	Comentários em português explicam a estrutura básica.
+-->
+<!doctype html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Projeto - Restaurante</title>
+		<!-- Link para o arquivo de estilos -->
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<!-- Cabeçalho simples da página -->
+		<header>
+			<h1>Exemplo: Classe Restaurante</h1>
+			<p>Abra o console do navegador para ver a saída do script.</p>
+		</header>
+
+		<!-- Conteúdo principal (pode ser expandido) -->
+		<main>
+			<section id="demo">
+				<!-- Área onde poderíamos renderizar informações do restaurante dinamicamente -->
+				<p id="restaurante-info">Informações do restaurante aparecerão aqui (opcional).</p>
+			</section>
+		</main>
+
+		<!-- Carrega o script principal -->
+		<script src="script.js"></script>
+		<!-- Script de demonstração que instancia a classe e atualiza a página -->
+		<script>
+			// Cria uma instância de exemplo da classe Restaurante e atualiza o parágrafo
+			const restaurante = new Restaurante('Sabor & Cia', 'Rua das Flores, 123');
+			// Mostra a mensagem no console
+			console.log(restaurante.apresentar());
+			// Atualiza o conteúdo do parágrafo na página
+			const p = document.getElementById('restaurante-info');
+			if (p) p.textContent = restaurante.apresentar();
+		</script>
+	</body>
+</html>
